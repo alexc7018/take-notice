@@ -1,10 +1,12 @@
 === Take Notice ===
-Contributors: aliso
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HNX9MBZC5CUWQ
-Tags: note, notice, notification, post, page
-Requires at least: 3.0
-Tested up to: 3.1
-Stable tag: trunk
+Contributors:      aliso
+Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HNX9MBZC5CUWQ
+Tags:              note, notice, notification, post, page
+Requires at least: 3.5.1
+Tested up to:      3.8.2
+Stable tag:        2.0
+License:           GPLv2 or later
+License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
 Add notices to all of your posts & pages at once. Customize where and how they appear.
 
@@ -12,48 +14,42 @@ Add notices to all of your posts & pages at once. Customize where and how they a
 
 Take Notice lets you add one or more notice boxes across your entire site. For each notice, you can customize the following:
 
-* Whether to appear on all posts, all pages, or both
-* Whether to appear on specific pages, categories, and tags
+* Whether to appear on all posts (of any post type)
+* Whether to appear on specific posts (of any post type)
+* Whether to appear on posts with certain terms (of any taxonomy)
 * Where to appear in the post (above or below the content)
-* Color of notice box (grey, red, yellow, green, blue)
+* Color of notice box (custom colors or preset palettes)
 * Whether to display the notice title with its content
 
-Take Notice is built using a custom post type, and is fully compatible with WordPress 3.0 and newer. You can add more than one notice at a time, and customize the above settings separately for each one. (See Screenshots for an example.)
+Notices are a custom post type, so they can be managed and edited just like posts. You can add more than one notice at a time, and customize the above settings separately for each one. (See Screenshots for an example.)
 
 == Installation ==
 
-1. Unzip the file and upload the `take-notice` folder to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Add notice(s) with the new post type added to your admin menu
+= Manual Installation =
+
+1. Upload the entire `/take-notice` directory to the `/wp-content/plugins/` directory.
+2. Activate Take Notice through the 'Plugins' menu in WordPress.
 
 == Frequently Asked Questions ==
 
-= Can I have the notice show up only on certain pages/categories/tags? =
+Questions? You can find me on Twitter at [@alisothegeek](http://twitter.com/alisothegeek) or contact me through [my website](http://alisothegeek.com/).
 
-Yes! Support for this was added in version 1.1.
-
-= I have a question about this plugin. =
-
-Contact the developer at [Aliso the Geek](http://alisothegeek.com/) or on Twitter [@alisothegeek](http://twitter.com/#!/alisothegeek).
-
-== Credits ==
-
-Menu icon from the [Fugue Icon Set](http://p.yusukekamiyamane.com/).
-
-Meta box class by [Rilwis](http://www.deluxeblogtips.com/2010/04/how-to-create-meta-box-wordpress-post.html).
+You can report bugs and request features [here on WordPress.org](http://wordpress.org/support/plugin/take-notice) or on [Github](https://github.com/aliso/take-notice/issues/new).
 
 == Screenshots ==
 
-1. Notices appearing in a post
-2. Notices in the admin menu
-3. Notice options
-
-== Upgrade Notice ==
-
-= 1.1 =
-Added support for choosing specific pages, categories and tags for a notice to appear on.
+1. An example of a notice below post content
+2. Options for the display and placement of a notice
+3. Choose custom colors, or choose from preset palettes
 
 == Changelog ==
+
+= 2.0 =
+* Rewritten from the ground up
+* Added support for displaying notices on custom post types
+* Added support for custom colors for notice background, border, and text
+* Added caching for improved performance
+* Improved notice options interface
 
 = 1.1 =
 * Added ability to display notices on specific pages
@@ -62,3 +58,8 @@ Added support for choosing specific pages, categories and tags for a notice to a
 
 = 1.0 =
 * Initial release
+
+== Upgrade Notice ==
+
+= 2.0 =
+The way settings for notices are stored has changed in this version. You may have to redo each notice's settings after updating.
