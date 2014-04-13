@@ -1,17 +1,30 @@
 <?php
-/**
- * class-take-notice-plugin.php
- */
+
 class Take_Notice_Plugin {
 
+	/**
+	 * The 'notice' post type
+	 *
+	 * @var string
+	 */
 	private $_post_type;
+
+	/**
+	 * All viewable post types
+	 *
+	 * @var array
+	 */
 	private $_available_post_types = array();
+
+	/**
+	 * All viewable taxonomies
+	 *
+	 * @var array
+	 */
 	private $_available_taxonomies = array();
 
 	/**
-	 * Construct
-	 *
-	 * @since 1.0
+	 * Constructor
 	 */
 	public function __construct() {
 
@@ -59,6 +72,9 @@ class Take_Notice_Plugin {
 		add_action( 'save_post',             array( $this, 'save_post' ), 99, 1 );
 	}
 
+	/**
+	 * Meta boxes using the ATG_Meta_Box class
+	 */
 	private function _meta_box() {
 
 		$show_on_all_options = array(
@@ -182,8 +198,6 @@ class Take_Notice_Plugin {
 
 	/**
 	 * Add all notices to content
-	 *
-	 * @since 1.0
 	 */
 	public function add_to_content( $content ) {
 		if ( ( is_singular() ) ) :
@@ -235,8 +249,6 @@ class Take_Notice_Plugin {
 
 	/**
 	 * Register post type
-	 *
-	 * @since 1.0
 	 */
 	public function register_post_type() {
 
@@ -271,6 +283,15 @@ class Take_Notice_Plugin {
 
 	}
 
+	/**
+	 * Display "post updated" messages for notices
+	 *
+	 * These are filtered so that the "View Post" link is not displayed
+	 * in the message (since notices can't be viewed individually).
+	 *
+	 * @param array $messages
+	 * @return mixed
+	 */
 	public function post_updated_messages( $messages ) {
 		$messages[$this->_post_type] = array(
 			0  => '',
@@ -293,6 +314,15 @@ class Take_Notice_Plugin {
 		return $messages;
 	}
 
+	/**
+	 * Get the HTML for displaying a notice
+	 *
+	 * Uses transients to save on making a ton of postmeta queries.
+	 *
+	 * @param WP_Post $notice
+	 * @param string  $position
+	 * @return string $notice_html
+	 */
 	private function _display_notice( $notice, $position ) {
 		$notice_html = get_transient( 'take_notice_' . $notice->ID );
 		if ( ! $notice_html ) {
@@ -317,6 +347,11 @@ class Take_Notice_Plugin {
 		return apply_filters( 'take_notice_notice_html', $notice_html, $notice );
 	}
 
+	/**
+	 * Delete the stored notice HTML when a notice is updated
+	 *
+	 * @param $post_id
+	 */
 	public function save_post( $post_id ) {
 		if ( get_post_type( $post_id ) == $this->_post_type ) {
 			delete_transient( 'take_notice_' . $post_id );
