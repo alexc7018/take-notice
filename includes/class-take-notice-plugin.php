@@ -77,16 +77,6 @@ class Take_Notice_Plugin {
 	 */
 	private function _meta_box() {
 
-		$show_on_all_options = array(
-			'everywhere' => 'Everywhere',
-		);
-		if ( 'posts' == get_option( 'show_on_front' ) ) {
-			$show_on_all_options['home'] = 'Home page (latest posts)';
-		} else {
-			$show_on_all_options['front_page'] = 'Home page';
-			$show_on_all_options['home']       = 'Latest posts';
-		}
-
 		$display_fields_0 = array();
 		$display_fields_1 = array();
 		$display_fields_2 = array();
