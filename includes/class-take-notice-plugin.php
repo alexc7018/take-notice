@@ -32,32 +32,20 @@ class Take_Notice_Plugin {
 		$this->url = plugins_url( '', __FILE__ );
 		$this->_post_type = 'notice';
 
-		$ignore_post_types = array(
-			'revision',
-			'nav_menu_item',
-			$this->_post_type,
-		);
 		$post_types = get_post_types();
 		foreach ( $post_types as $post_type_id ) {
-			if ( ! in_array( $post_type_id, $ignore_post_types ) ) {
-				$post_type        = get_post_type_object( $post_type_id );
+			$post_type = get_post_type_object( $post_type_id );
+			if ( $post_type->public ) {
 				$post_type_labels = get_post_type_labels( $post_type );
-
 				$this->_available_post_types[$post_type_id] = $post_type_labels->name;
 			}
 		}
 
-		$ignore_taxonomies = array(
-			'nav_menu',
-			'link_category',
-			'post_format',
-		);
 		$taxonomies = get_taxonomies();
 		foreach ( $taxonomies as $taxonomy_id ) {
-			if ( ! in_array( $taxonomy_id, $ignore_taxonomies ) ) {
-				$taxonomy        = get_taxonomy( $taxonomy_id );
+			$taxonomy = get_taxonomy( $taxonomy_id );
+			if ( $taxonomy->public ) {
 				$taxonomy_labels = get_taxonomy_labels( $taxonomy );
-
 				$this->_available_taxonomies[$taxonomy_id] = $taxonomy_labels->name;
 			}
 		}
