@@ -86,7 +86,7 @@ class Take_Notice_Plugin {
 				'id' => 'show_on_specific_' . $post_type_id,
 				'type' => 'select',
 				'multiple' => true,
-				'label' => 'Show on Specific ' . $post_type_name,
+				'label' => sprintf( _x( 'Show on Specific %s', 'Post type name', 'takenotice' ) ),
 				'options' => $posts,
 			);
 		}
@@ -101,7 +101,7 @@ class Take_Notice_Plugin {
 				'id' => 'show_on_specific_' . $taxonomy_id,
 				'type' => 'select',
 				'multiple' => true,
-				'label' => 'Show on Posts in Specific ' . $taxonomy_name,
+				'label' => sprintf( _x( 'Show on Posts in Specific %s', 'Taxonomy name', 'takenotice' ) ),
 				'options' => $terms,
 			);
 		}
@@ -110,7 +110,7 @@ class Take_Notice_Plugin {
 			array(
 				'id' => 'position_in_content',
 				'type' => 'select',
-				'label' => 'Position in Content',
+				'label' => __( 'Position in Content', 'takenotice' ),
 				'options' => array(
 					'before' => 'Before content',
 					'after' => 'After content',
@@ -119,7 +119,7 @@ class Take_Notice_Plugin {
 			array(
 				'id' => 'show_on',
 				'type' => 'checkboxes',
-				'label' => 'Show on',
+				'label' => _x( 'Show on', 'Label for a list of checkboxes', 'takenotice' ),
 				'options' => $show_on_all_options,
 			),
 		);
@@ -130,7 +130,7 @@ class Take_Notice_Plugin {
 			array(
 				'id' => 'show_title',
 				'type' => 'checkboxes',
-				'label' => 'Show Notice Title',
+				'label' => __( 'Show Notice Title', 'takenotice' ),
 				'options' => array(
 					'show_title' => 'Display the notice title'
 				),
@@ -138,19 +138,19 @@ class Take_Notice_Plugin {
 			array(
 				'id' => 'background_color',
 				'type' => 'color',
-				'label' => 'Background Color',
+				'label' => __( 'Background Color', 'takenotice' ),
 				'placeholder' => '#e5e5e5',
 			),
 			array(
 				'id' => 'border_color',
 				'type' => 'color',
-				'label' => 'Border Color',
+				'label' => __( 'Border Color', 'takenotice' ),
 				'placeholder' => '#bbbbbb',
 			),
 			array(
 				'id' => 'text_color',
 				'type' => 'color',
-				'label' => 'Text Color',
+				'label' => __( 'Text Color', 'takenotice' ),
 				'placeholder' => '#555555',
 			),
 		);
@@ -160,14 +160,14 @@ class Take_Notice_Plugin {
 		}
 
 		new ATG_Meta_Box( 'take_notice_display', array(
-			'title'      => 'Notice Display Options',
+			'title'      => __( 'Notice Display Options', 'takenotice' ),
 			'post_types' => array( 'notice' ),
 			'fields'     => $display_fields,
 			'prefix'     => 'take_notice',
 		) );
 
 		new ATG_Meta_Box( 'take_notice_appearance', array(
-			'title'      => 'Notice Appearance',
+			'title'      => __( 'Notice Appearance', 'takenotice' ),
 			'post_types' => array( 'notice' ),
 			'fields'     => $appearance_fields,
 			'prefix'     => 'take_notice',
@@ -232,18 +232,18 @@ class Take_Notice_Plugin {
 
 		register_post_type( 'notice', array(
 			'labels'             => array(
-				'name'               => __( 'Notices' ),
-				'singular_name'      => __( 'Notice' ),
-				'add_new'            => __( 'Add New' ),
-				'add_new_item'       => __( 'Add New Notice' ),
-				'edit_item'          => __( 'Edit Notice' ),
-				'new_item'           => __( 'New Notice' ),
-				'view_item'          => __( 'View Notice' ),
-				'search_items'       => __( 'Search Notices' ),
-				'not_found'          => __( 'No notices found' ),
-				'not_found_in_trash' => __( 'No notices found in Trash' ),
-				'parent_item_colon'  => __( 'Parent Notice:' ),
-				'menu_name'          => __( 'Notices' )
+				'name'               => __( 'Notices', 'takenotice' ),
+				'singular_name'      => __( 'Notice', 'takenotice' ),
+				'add_new'            => __( 'Add New', 'takenotice' ),
+				'add_new_item'       => __( 'Add New Notice', 'takenotice' ),
+				'edit_item'          => __( 'Edit Notice', 'takenotice' ),
+				'new_item'           => __( 'New Notice', 'takenotice' ),
+				'view_item'          => __( 'View Notice', 'takenotice' ),
+				'search_items'       => __( 'Search Notices', 'takenotice' ),
+				'not_found'          => __( 'No notices found', 'takenotice' ),
+				'not_found_in_trash' => __( 'No notices found in Trash', 'takenotice' ),
+				'parent_item_colon'  => __( 'Parent Notice:', 'takenotice' ),
+				'menu_name'          => __( 'Notices', 'takenotice' )
 			),
 			'public'             => false,
 			'publicly_queryable' => false,
