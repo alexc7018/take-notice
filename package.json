@@ -2,7 +2,7 @@
   "name": "take-notice",
   "title": "Take Notice",
   "description": "Add notices to all of your posts & pages at once. Customize where and how they appear.",
-  "version": "2.0",
+  "version": "2.0.0",
   "homepage": "http://wordpress.org/plugins",
   "author": {
     "name": "Alison Barrett",
@@ -20,7 +20,9 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-compress": "~0.5.2",
-    "grunt-contrib-sass": "~0.2.2"
+    "grunt-contrib-sass": "~0.2.2",
+    "grunt-pot": "~0.1.2",
+    "grunt-po2mo": "~0.1.0"
   },
   "keywords": []
 }
