@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: take-notice 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-15 19:13-0500\n"
+"PO-Revision-Date: 2014-04-15 19:14-0600\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_US\n"
+
+#: includes/class-take-notice-plugin.php:89
+#, php-format
+msgctxt "Post type name"
+msgid "Show on Specific %s"
+msgstr "Show on Specific %s"
+
+#: includes/class-take-notice-plugin.php:104
+#, php-format
+msgctxt "Taxonomy name"
+msgid "Show on Posts in Specific %s"
+msgstr "Show on Posts in Specific %s"
+
+#: includes/class-take-notice-plugin.php:113
+msgid "Position in Content"
+msgstr "Position in Content"
+
+#: includes/class-take-notice-plugin.php:122
+msgctxt "Label for a list of checkboxes"
+msgid "Show on"
+msgstr "Show on"
+
+#: includes/class-take-notice-plugin.php:133
+msgid "Show Notice Title"
+msgstr "Show Notice Title"
+
+#: includes/class-take-notice-plugin.php:141
+msgid "Background Color"
+msgstr "Background Color"
+
+#: includes/class-take-notice-plugin.php:147
+msgid "Border Color"
+msgstr "Border Color"
+
+#: includes/class-take-notice-plugin.php:153
+msgid "Text Color"
+msgstr "Text Color"
+
+#: includes/class-take-notice-plugin.php:163
+msgid "Notice Display Options"
+msgstr "Notice Display Options"
+
+#: includes/class-take-notice-plugin.php:170
+msgid "Notice Appearance"
+msgstr "Notice Appearance"
+
+#: includes/class-take-notice-plugin.php:235
+#: includes/class-take-notice-plugin.php:246
+msgid "Notices"
+msgstr "Notices"
+
+#: includes/class-take-notice-plugin.php:236
+msgid "Notice"
+msgstr "Notice"
+
+#: includes/class-take-notice-plugin.php:237
+msgid "Add New"
+msgstr "Add New"
+
+#: includes/class-take-notice-plugin.php:238
+msgid "Add New Notice"
+msgstr "Add New Notice"
+
+#: includes/class-take-notice-plugin.php:239
+msgid "Edit Notice"
+msgstr "Edit Notice"
+
+#: includes/class-take-notice-plugin.php:240
+msgid "New Notice"
+msgstr "New Notice"
+
+#: includes/class-take-notice-plugin.php:241
+msgid "View Notice"
+msgstr "View Notice"
+
+#: includes/class-take-notice-plugin.php:242
+msgid "Search Notices"
+msgstr "Search Notices"
+
+#: includes/class-take-notice-plugin.php:243
+msgid "No notices found"
+msgstr "No notices found"
+
+#: includes/class-take-notice-plugin.php:244
+msgid "No notices found in Trash"
+msgstr "No notices found in Trash"
+
+#: includes/class-take-notice-plugin.php:245
+msgid "Parent Notice:"
+msgstr "Parent Notice:"
+
+#: includes/class-take-notice-plugin.php:276
+#: includes/class-take-notice-plugin.php:279
+msgid "Notice updated."
+msgstr "Notice updated."
+
+#: includes/class-take-notice-plugin.php:277
+msgid "Custom field updated."
+msgstr "Custom field updated."
+
+#: includes/class-take-notice-plugin.php:278
+msgid "Custom field deleted."
+msgstr "Custom field deleted."
+
+#: includes/class-take-notice-plugin.php:281
+msgid "Notice published."
+msgstr "Notice published."
+
+#: includes/class-take-notice-plugin.php:282
+msgid "Notice saved."
+msgstr "Notice saved."
+
+#: includes/class-take-notice-plugin.php:283
+msgid "Notice submitted."
+msgstr "Notice submitted."
+
+#: includes/class-take-notice-plugin.php:285
+#, php-format
+msgid "Notice scheduled for: <strong>%1$s</strong>."
+msgstr "Notice scheduled for: <strong>%1$s</strong>."
+
+#: includes/class-take-notice-plugin.php:287
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: includes/class-take-notice-plugin.php:289
+msgid "Notice draft updated."
+msgstr "Notice draft updated."

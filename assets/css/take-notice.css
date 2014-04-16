@@ -1,0 +1,21 @@
+.take-notice {
+	padding: 1em 1em 0;
+}
+
+.take-notice.after-content {
+	margin: 1em 0 0;
+}
+
+.take-notice.before-content {
+	margin: 0 0 1em;
+}
+
+.take-notice h1,
+.take-notice h2,
+.take-notice h3,
+.take-notice h4,
+.take-notice h5,
+.take-notice h6,
+.take-notice p {
+	margin: 0 0 1em;
+}
