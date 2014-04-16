@@ -77,49 +77,49 @@ class Take_Notice_Plugin {
 				'posts_per_page' => -1,
 				'post_type'      => $post_type_id,
 				'orderby'        => 'title',
-				'order' => 'ASC',
+				'order'          => 'ASC',
 			) );
 			foreach ( $post_objects as $post_object ) {
 				$posts[$post_object->ID] = $post_object->post_title;
 			}
 			$display_fields_1[] = array(
-				'id' => 'show_on_specific_' . $post_type_id,
-				'type' => 'select',
+				'id'       => 'show_on_specific_' . $post_type_id,
+				'type'     => 'select',
 				'multiple' => true,
-				'label' => sprintf( _x( 'Show on Specific %s', 'Post type name', 'takenotice' ) ),
-				'options' => $posts,
+				'label'    => sprintf( _x( 'Show on Specific %s', 'Post type name', 'takenotice' ) ),
+				'options'  => $posts,
 			);
 		}
 
 		foreach ( $this->_available_taxonomies as $taxonomy_id => $taxonomy_name ) {
-			$terms = array();
+			$terms        = array();
 			$term_objects = get_terms( $taxonomy_id );
 			foreach ( $term_objects as $term ) {
 				$terms[$term->term_id] = $term->name;
 			}
 			$display_fields_2[] = array(
-				'id' => 'show_on_specific_' . $taxonomy_id,
-				'type' => 'select',
+				'id'       => 'show_on_specific_' . $taxonomy_id,
+				'type'     => 'select',
 				'multiple' => true,
-				'label' => sprintf( _x( 'Show on Posts in Specific %s', 'Taxonomy name', 'takenotice' ) ),
-				'options' => $terms,
+				'label'    => sprintf( _x( 'Show on Posts in Specific %s', 'Taxonomy name', 'takenotice' ) ),
+				'options'  => $terms,
 			);
 		}
 
 		$display_fields_0 = array(
 			array(
-				'id' => 'position_in_content',
-				'type' => 'select',
-				'label' => __( 'Position in Content', 'takenotice' ),
+				'id'      => 'position_in_content',
+				'type'    => 'select',
+				'label'   => __( 'Position in Content', 'takenotice' ),
 				'options' => array(
 					'before' => 'Before content',
-					'after' => 'After content',
+					'after'  => 'After content',
 				),
 			),
 			array(
-				'id' => 'show_on',
-				'type' => 'checkboxes',
-				'label' => _x( 'Show on', 'Label for a list of checkboxes', 'takenotice' ),
+				'id'      => 'show_on',
+				'type'    => 'checkboxes',
+				'label'   => _x( 'Show on', 'Label for a list of checkboxes', 'takenotice' ),
 				'options' => $show_on_all_options,
 			),
 		);
@@ -128,29 +128,29 @@ class Take_Notice_Plugin {
 
 		$appearance_fields = array(
 			array(
-				'id' => 'show_title',
-				'type' => 'checkboxes',
-				'label' => __( 'Show Notice Title', 'takenotice' ),
+				'id'      => 'show_title',
+				'type'    => 'checkboxes',
+				'label'   => __( 'Show Notice Title', 'takenotice' ),
 				'options' => array(
 					'show_title' => 'Display the notice title'
 				),
 			),
 			array(
-				'id' => 'background_color',
-				'type' => 'color',
-				'label' => __( 'Background Color', 'takenotice' ),
+				'id'          => 'background_color',
+				'type'        => 'color',
+				'label'       => __( 'Background Color', 'takenotice' ),
 				'placeholder' => '#e5e5e5',
 			),
 			array(
-				'id' => 'border_color',
-				'type' => 'color',
-				'label' => __( 'Border Color', 'takenotice' ),
+				'id'          => 'border_color',
+				'type'        => 'color',
+				'label'       => __( 'Border Color', 'takenotice' ),
 				'placeholder' => '#bbbbbb',
 			),
 			array(
-				'id' => 'text_color',
-				'type' => 'color',
-				'label' => __( 'Text Color', 'takenotice' ),
+				'id'          => 'text_color',
+				'type'        => 'color',
+				'label'       => __( 'Text Color', 'takenotice' ),
 				'placeholder' => '#555555',
 			),
 		);
@@ -197,10 +197,10 @@ class Take_Notice_Plugin {
 			foreach ( get_the_taxonomies( get_the_ID() ) as $tax_id => $term_list ) {
 				$terms = get_the_terms( get_the_ID(), $tax_id );
 				if ( ! empty( $terms ) ) {
-					$term_ids = wp_list_pluck( $terms, 'term_id' );
+					$term_ids       = wp_list_pluck( $terms, 'term_id' );
 					$meta_queries[] = array(
-						'key' => '_take_notice_show_on_specific_' . $tax_id,
-						'value' => $term_ids,
+						'key'     => '_take_notice_show_on_specific_' . $tax_id,
+						'value'   => $term_ids,
 						'compare' => 'IN',
 					);
 				}
