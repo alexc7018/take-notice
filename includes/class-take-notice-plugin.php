@@ -271,6 +271,7 @@ class Take_Notice_Plugin {
 	 * @return mixed
 	 */
 	public function post_updated_messages( $messages ) {
+		global $post;
 		$messages[$this->_post_type] = array(
 			0  => '',
 			1  => __( 'Notice updated.', 'takenotice' ),
