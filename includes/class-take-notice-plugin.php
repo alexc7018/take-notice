@@ -86,7 +86,7 @@ class Take_Notice_Plugin {
 				'id'       => 'show_on_specific_' . $post_type_id,
 				'type'     => 'select',
 				'multiple' => true,
-				'label'    => sprintf( _x( 'Show on Specific %s', 'Post type name', 'takenotice' ) ),
+				'label'    => sprintf( _x( 'Show on Specific %s', 'Post type name', 'takenotice' ), $post_type_name ),
 				'options'  => $posts,
 			);
 		}
@@ -101,7 +101,7 @@ class Take_Notice_Plugin {
 				'id'       => 'show_on_specific_' . $taxonomy_id,
 				'type'     => 'select',
 				'multiple' => true,
-				'label'    => sprintf( _x( 'Show on Posts in Specific %s', 'Taxonomy name', 'takenotice' ) ),
+				'label'    => sprintf( _x( 'Show on Posts in Specific %s', 'Taxonomy name', 'takenotice' ), $taxonomy_name ),
 				'options'  => $terms,
 			);
 		}
